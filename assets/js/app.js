@@ -75,6 +75,16 @@ function initQuiz() {
     const scenario = QUIZ_SCENARIOS[i];
     if (!scenario) return;
     questionEl.textContent = scenario.question;
+    const contextEl =
+      document.getElementById("quiz-context") ||
+      (() => {
+        const el = document.createElement("p");
+        el.id = "quiz-context";
+        el.className = "quiz-context";
+        questionEl.insertAdjacentElement("afterend", el);
+        return el;
+      })();
+    contextEl.textContent = scenario.context || "";
     questionEl.dataset.anchor = scenario.id;
     choicesEl.innerHTML = "";
     scenario.choices.forEach((choice) => {
@@ -144,6 +154,7 @@ function initSolutions() {
       card.innerHTML = `
         <h3>${solution.title}</h3>
         <p>${solution.impact}</p>
+        <p class="solution-expl">${solution.explanation}</p>
         <div class="solution-meta">
           <span>Catégorie : ${solution.category}</span>
           <span>Accessibilité : ${solution.accessibility}</span>

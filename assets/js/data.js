@@ -1,8 +1,9 @@
-// Données mockées pour les scénarios, solutions et badges
+// Donnees mockees pour les scenarios, solutions et badges
 const QUIZ_SCENARIOS = [
   {
     id: "scenario-enseignant",
     title: "Salle info en rade",
+    context: "Objectif : prolonger le parc sans achat massif.",
     question: "La moitie des postes sont lents. Que fais-tu pour sauver ton cours ?",
     choices: [
       {
@@ -13,7 +14,7 @@ const QUIZ_SCENARIOS = [
       {
         label: "Appeler le support Big Tech pour upgrader les licences.",
         impact: 0,
-        feedback: "Neutre : tu restes dependant(e), sans resoudre l obsolescence.",
+        feedback: "Neutre : tu restes dependant(e), sans resoudre l'obsolescence.",
       },
       {
         label: "Remplacer tout le parc par du neuf proprietaire.",
@@ -25,12 +26,13 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-eleve",
     title: "Budget serre, Big Tech insiste",
+    context: "Objectif : garder la main sur les formats et les couts.",
     question: "Une suite proprietaire propose une reduction. Comment reagis-tu ?",
     choices: [
       {
         label: "Tester des alternatives libres (OnlyOffice, LibreOffice, Pads).",
         impact: 1,
-        feedback: "Top : tu favorises l interop et l apprentissage des formats ouverts.",
+        feedback: "Top : tu favorises l'interop et l'apprentissage des formats ouverts.",
       },
       {
         label: "Accepter la reduction pour 1 an et aviser ensuite.",
@@ -40,14 +42,15 @@ const QUIZ_SCENARIOS = [
       {
         label: "Signer 5 ans pour securiser le prix.",
         impact: -1,
-        feedback: "Tu bloques ton budget et l autonomie pour longtemps.",
+        feedback: "Tu bloques ton budget et l'autonomie pour longtemps.",
       },
     ],
   },
   {
     id: "scenario-admin",
     title: "Donnees eleves sous controle",
-    question: "Le cloud externe stocke les dossiers eleves. Quelle gouvernance choisir ?",
+    context: "Objectif : gouverner les donnees sensibles en interne.",
+    question: "Le cloud externe stocke les dossiers d'eleves. Quelle gouvernance choisir ?",
     choices: [
       {
         label: "Heberger localement ou chez un prestataire souverain, chiffrement.",
@@ -57,7 +60,7 @@ const QUIZ_SCENARIOS = [
       {
         label: "Signer un avenant de traitement de donnees sans audit.",
         impact: 0,
-        feedback: "Peut depanner, mais tu depends toujours d un tiers opaque.",
+        feedback: "Peut depanner, mais tu depends toujours d'un tiers opaque.",
       },
       {
         label: "Exporter les donnees vers un service gratuit non certifie.",
@@ -69,6 +72,7 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-reemploi",
     title: "Gros arrivee de vieux PC",
+    context: "Objectif : maximiser le reemploi et limiter l'achat neuf.",
     question: "Le departement livre 40 PC de 7 ans. Que fais-tu ?",
     choices: [
       {
@@ -91,7 +95,8 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-logiciel",
     title: "Choix ENT",
-    question: "L ENT proprietaire impose des trackers. Reponse ?",
+    context: "Objectif : limiter le tracking et rester interop.",
+    question: "L'ENT proprietaire impose des trackers. Reponse ?",
     choices: [
       {
         label: "Proposer un ENT libre auto-heberge ou chez hebergeur souverain.",
@@ -113,10 +118,11 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-cloud",
     title: "Stockage collaboratif",
-    question: "Quel cloud pour les groupes d eleves ?",
+    context: "Objectif : collaborer sans vendre les donnees.",
+    question: "Quel cloud pour les groupes d'eleves ?",
     choices: [
       {
-        label: "Nextcloud self-host ou assoc libre, comptes limits.",
+        label: "Nextcloud self-host ou assoc libre, comptes limites.",
         impact: 1,
         feedback: "Top : controle des donnees, integration LibreOffice/OnlyOffice.",
       },
@@ -135,10 +141,11 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-access",
     title: "Accessibilite en urgence",
-    question: "Un eleve malvoyant arrive. Que fais-tu d abord ?",
+    context: "Objectif : accessibilite immediate pour tous.",
+    question: "Un eleve malvoyant arrive. Que fais-tu d'abord ?",
     choices: [
       {
-        label: "Activer lecteur d ecran, contraste eleve, police legible.",
+        label: "Activer lecteur d'ecran, contraste eleve, police legible.",
         impact: 1,
         feedback: "Inclusif : tu rends le poste utilisable immediatement.",
       },
@@ -157,7 +164,8 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-energie",
     title: "Electricite limitee",
-    question: "Panne partielle d elec, tu dois limiter la conso.",
+    context: "Objectif : continuer le cours en sobriete.",
+    question: "Panne partielle d'elec, tu dois limiter la conso.",
     choices: [
       {
         label: "Basculer sur portables reconditionnes + mode basse conso.",
@@ -167,7 +175,7 @@ const QUIZ_SCENARIOS = [
       {
         label: "Couper tout et envoyer les eleves en etude.",
         impact: 0,
-        feedback: "Neutre : pas de risque, mais pas d apprentissage.",
+        feedback: "Neutre : pas de risque, mais pas d'apprentissage.",
       },
       {
         label: "Allumer tout le parc et croiser les doigts.",
@@ -178,7 +186,8 @@ const QUIZ_SCENARIOS = [
   },
   {
     id: "scenario-formations",
-    title: "Former l equipe",
+    title: "Former l'equipe",
+    context: "Objectif : embarquer tout le monde progressivement.",
     question: "Comment embarquer les profs ?",
     choices: [
       {
@@ -194,13 +203,14 @@ const QUIZ_SCENARIOS = [
       {
         label: "Imposer sans accompagnement.",
         impact: -1,
-        feedback: "Rejet, frustration, pas d autonomie.",
+        feedback: "Rejet, frustration, pas d'autonomie.",
       },
     ],
   },
   {
     id: "scenario-dechets",
     title: "Fin de vie materiel",
+    context: "Objectif : recycler proprement et recuperer des pieces.",
     question: "Que faire des postes irreparables ?",
     choices: [
       {
@@ -223,15 +233,16 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-communs",
     title: "Communs et partage",
-    question: "Comment documenter vos avancées NIRD ?",
+    context: "Objectif : capitaliser et partager les acquis.",
+    question: "Comment documenter vos avancees NIRD ?",
     choices: [
       {
         label: "Creer un wiki libre et publier guides/scripts sous licence ouverte.",
         impact: 1,
-        feedback: "Top : tu crées un commun reutilisable par d autres etablissements.",
+        feedback: "Top : tu crees un commun reutilisable par d'autres etablissements.",
       },
       {
-        label: "Garder un drive prive pour l equipe.",
+        label: "Garder un drive prive pour l'equipe.",
         impact: 0,
         feedback: "Fonctionnel mais non partageable, valeur limitee.",
       },
@@ -245,6 +256,7 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-secu",
     title: "Securite vs confort",
+    context: "Objectif : securiser sans bloquer les usages.",
     question: "Les mots de passe eleves sont faibles. Que faire ?",
     choices: [
       {
@@ -255,7 +267,7 @@ const QUIZ_SCENARIOS = [
       {
         label: "Garder les mots de passe actuels pour eviter les plaintes.",
         impact: 0,
-        feedback: "Risques maintenus, pas d amelioration.",
+        feedback: "Risques maintenus, pas d'amelioration.",
       },
       {
         label: "Exiger un changement complexe tous les mois.",
@@ -267,12 +279,13 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-tablettes",
     title: "Parc de tablettes",
+    context: "Objectif : eviter l'enfermement fournisseur.",
     question: "On te propose 100 tablettes verrouillees fournisseur.",
     choices: [
       {
         label: "Exiger un OS libre/gestion MDM ouverte + reemploi des coques existantes.",
         impact: 1,
-        feedback: "Tu gardes la main, tu limites l emprunte materielle.",
+        feedback: "Tu gardes la main, tu limites l'empreinte materielle.",
       },
       {
         label: "Accepter mais limiter aux usages pedago essentiels.",
@@ -289,6 +302,7 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-ia",
     title: "IA proprietaire",
+    context: "Objectif : proteger les copies et l'equite.",
     question: "Une IA payante promet de corriger les copies.",
     choices: [
       {
@@ -311,6 +325,7 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-maintenance",
     title: "Maintenance du parc",
+    context: "Objectif : securite et fiabilite continues.",
     question: "Les mises a jour ne sont pas faites depuis 1 an.",
     choices: [
       {
@@ -333,15 +348,16 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-pedago",
     title: "Parents pro-GAFA",
+    context: "Objectif : maintenir la ligne NIRD en expliquant.",
     question: "Des parents veulent imposer un outil Big Tech.",
     choices: [
       {
-        label: "Expliquer la charte NIRD + proposer l equivalent libre documente.",
+        label: "Expliquer la charte NIRD + proposer l'equivalent libre documente.",
         impact: 1,
         feedback: "Clair, argumente, tu restes coherent avec le projet.",
       },
       {
-        label: "Accepter pour cette annee, transition planifiee l an prochain.",
+        label: "Accepter pour cette annee, transition planifiee l'an prochain.",
         impact: 0,
         feedback: "Compromis temporaire, mais attention a la reconduction.",
       },
@@ -355,17 +371,18 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-resilience",
     title: "Resilience reseau",
+    context: "Objectif : continuer meme sans Internet.",
     question: "Internet tombe pendant un examen pratique.",
     choices: [
       {
         label: "Basculer sur serveur local + ressources offline.",
         impact: 1,
-        feedback: "Continuite d activite, autonomie locale.",
+        feedback: "Continuite d'activite, autonomie locale.",
       },
       {
-        label: "Reporter l examen.",
+        label: "Reporter l'examen.",
         impact: 0,
-        feedback: "Pas d apprentissage, mais pas de fuite de donnees.",
+        feedback: "Pas d'apprentissage, mais pas de fuite de donnees.",
       },
       {
         label: "Utiliser un tethering perso pour tout le monde.",
@@ -377,6 +394,7 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-gdpr",
     title: "Consentement et RGPD",
+    context: "Objectif : respecter la vie privee des mineurs.",
     question: "Une appli demande des comptes eleves avec photo.",
     choices: [
       {
@@ -390,7 +408,7 @@ const QUIZ_SCENARIOS = [
         feedback: "Partiel, la collecte reste lourde.",
       },
       {
-        label: "Accepter d office.",
+        label: "Accepter d'office.",
         impact: -1,
         feedback: "Risque legal et vie privee.",
       },
@@ -399,17 +417,18 @@ const QUIZ_SCENARIOS = [
   {
     id: "scenario-energie2",
     title: "Serveur energivore",
+    context: "Objectif : reduire la conso et la dette technique.",
     question: "Un vieux serveur consomme trop.",
     choices: [
       {
-        label: "Virtualiser sur machine plus recente et sobre, couper l ancien.",
+        label: "Virtualiser sur machine plus recente et sobre, couper l'ancien.",
         impact: 1,
         feedback: "Sobriete et fiabilite accrues.",
       },
       {
-        label: "Le laisser tourner jusqu a panne.",
+        label: "Le laisser tourner jusqu'a panne.",
         impact: 0,
-        feedback: "Consommation inutile, risque d arret brutal.",
+        feedback: "Consommation inutile, risque d'arret brutal.",
       },
       {
         label: "Laisser tourner et ajouter un autre serveur sans audit.",
@@ -423,42 +442,45 @@ const QUIZ_SCENARIOS = [
 const BADGES = [
   {
     id: "badge-libre",
-    label: "Défricheur Libre",
+    label: "Defricheur Libre",
     rule: (score) => score >= 2,
   },
   {
     id: "badge-donnees",
-    label: "Gardien des Données",
+    label: "Gardien des Donnees",
     rule: (score) => score >= 3,
   },
   {
     id: "badge-sobriete",
-    label: "Champion Sobriété",
+    label: "Champion Sobriete",
     rule: (score) => score >= 4,
   },
 ];
 
 const SOLUTIONS = [
   {
-    title: "Linux éducation",
+    title: "Linux education",
     category: "systeme",
-    impact: "Prolonge la vie des PC, maîtrise des mises à jour",
-    accessibility: "Interface légère, bon contraste, lecteurs d’écran compatibles",
+    impact: "Prolonge la vie des PC, maitrise des mises a jour",
+    accessibility: "Interface legere, bon contraste, lecteurs d'ecran compatibles",
     resources: ["Debian Edu", "Ubuntu LTS", "PrimTux"],
+    explanation: "Remplacer l'OS par une base libre stable evite l'obsolescence logicielle et les licences payantes.",
   },
   {
-    title: "Réemploi & reconditionné",
+    title: "Reemploi & reconditionne",
     category: "materiel",
-    impact: "Allonge la durée de vie de 3 ans et plus",
-    accessibility: "Matériel testé, claviers contrastés, réparation locale",
-    resources: ["Ateliers élèves-profs", "Fablab local"],
+    impact: "Allonge la duree de vie de 3 ans et plus",
+    accessibility: "Materiel teste, claviers contrastes, reparation locale",
+    resources: ["Ateliers eleves-profs", "Fablab local"],
+    explanation: "Reutiliser le materiel reduit l'empreinte carbone et cree de la valeur pedagogique par la reparation.",
   },
   {
-    title: "Communs numériques",
+    title: "Communs numeriques",
     category: "communaute",
-    impact: "Mutualisation, documentation partagée",
+    impact: "Mutualisation, documentation partagee",
     accessibility: "Guides libres, wiki collaboratif",
-    resources: ["Wikis d’établissement", "OpenStreetMap Club"],
+    resources: ["Wikis d'etablissement", "OpenStreetMap Club"],
+    explanation: "Documenter et partager sous licence libre capitalise les efforts et evite de reinventer la roue.",
   },
   {
     title: "Pads collaboratifs libres",
@@ -466,26 +488,30 @@ const SOLUTIONS = [
     impact: "Travail synchrone sans comptes Big Tech",
     accessibility: "A11y correcte, textes simples",
     resources: ["Etherpad", "HedgeDoc"],
+    explanation: "Les pads remplacent les suites en ligne proprietaires et evitent le suivi publicitaire.",
   },
   {
     title: "Stockage souverain (Nextcloud)",
     category: "systeme",
-    impact: "Données hébergées localement, partage maîtrisé",
-    accessibility: "Clients multi-OS, support lecteurs d’écran",
+    impact: "Donnees hebergees localement, partage maitrise",
+    accessibility: "Clients multi-OS, support lecteurs d'ecran",
     resources: ["Nextcloud", "Collabora"],
+    explanation: "Heberger ses fichiers garde la souverainete, permet des quotas et du chiffrement sous controle.",
   },
   {
-    title: "Éco-conception web",
+    title: "Eco-conception web",
     category: "sobriete",
-    impact: "Pages légères, moins de bande passante",
+    impact: "Pages legeres, moins de bande passante",
     accessibility: "Contrastes, navigation clavier, tailles relatives",
     resources: ["RGESN", "EcoIndex", "Checklist a11y"],
+    explanation: "Des pages plus sobres chargent plus vite, consomment moins et restent accessibles.",
   },
   {
     title: "Parcours de formation interne",
     category: "communaute",
-    impact: "Autonomie des équipes, moins de dépendance au support externe",
+    impact: "Autonomie des equipes, moins de dependance au support externe",
     accessibility: "Supports accessibles, sous-titres, transcription",
-    resources: ["Ateliers mensuels", "Tutoriels vidéo sous-titrés"],
+    resources: ["Ateliers mensuels", "Tutoriels video sous-titres"],
+    explanation: "Former en interne diffuse la culture libre et reduit les couts recurrents.",
   },
 ];
