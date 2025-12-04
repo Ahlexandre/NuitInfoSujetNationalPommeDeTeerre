@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Village NIRDistant - Accueil</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Passer au contenu principal</a>
+  <header class="site-header">
+    <div class="content header-inner">
+      <div class="logo-block">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <path d="M32 4l20 8v16c0 12.7-8.3 24.4-20 28-11.7-3.6-20-15.3-20-28V12l20-8z"/>
+            <path d="M32 12l-10 4v12c0 7.2 4.7 13.9 10 16 5.3-2.1 10-8.8 10-16V16l-10-4z" fill="#d49a3a"/>
+          </svg>
+        </div>
+        <div>
+          <p class="eyebrow">Village numerique resistant</p>
+          <p class="site-title">Village NIRDistant</p>
+          <p class="group-name">Groupe Pomme de terre</p>
+        </div>
+      </div>
+      <nav aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="parcours.html">Parcours</a></li>
+          <li><a href="solutions.html">Solutions NIRD</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+          <li><a href="contribuer.html">Contribuer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="content">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="tagline">Resister aux Big Tech, ensemble</p>
+        <h1>En 3 minutes, comprends, choisis, et joue pour ton village numerique.</h1>
+        <p>Une aventure simple : lis, clique, gagne des badges, et repars avec un plan d action sobre, libre et accessible.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="parcours.html">Jouer les scenarios</a>
+          <a class="btn ghost" href="solutions.html">Voir les solutions</a>
+        </div>
+        <div class="badges-inline" aria-label="Exemples de badges">
+          <span class="pill">Resistance</span>
+          <span class="pill">Sobriete</span>
+          <span class="pill">Donnees</span>
+        </div>
+      </div>
+      <div class="hero-visual" role="img" aria-label="Village numerique avec boucliers et antennes libres">
+        <div class="hill"></div>
+        <div class="hut hut-1"></div>
+        <div class="hut hut-2"></div>
+        <div class="tower-icon" aria-hidden="true">
+          <span class="signal-wave"></span>
+        </div>
+        <div class="shield-icon" aria-hidden="true"></div>
+        <div class="tree"></div>
+        <div class="tree t2"></div>
+      </div>
+    </section>
+
+    <section class="pillars">
+      <h2>Mode d emploi eclair</h2>
+      <div class="grid cards-3">
+        <article class="card">
+          <h3>1) Joue</h3>
+          <p>Va dans <strong>Parcours</strong>, clique sur "Lancer", reponds. Feedback immediat, points visibles en haut.</p>
+        </article>
+        <article class="card">
+          <h3>2) Choisis</h3>
+          <p>Ouvre <strong>Solutions NIRD</strong>, filtre par besoin (systeme, materiel...). Copie la liste en JSON si tu veux.</p>
+        </article>
+        <article class="card">
+          <h3>3) Compare</h3>
+          <p>Dans <strong>Simulation</strong>, ajuste 4 curseurs. Score autonomie, budget et empreinte changent en direct.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="section-header">
+        <h2>Pourquoi resister ?</h2>
+        <p>Un rappel rapide avant de cliquer.</p>
+      </div>
+      <div class="grid cards-3">
+        <article class="card emphasis">
+          <h3>Donnees captives</h3>
+          <p>Les donnees eleves ne sont pas un produit. Hebergement local = controle.</p>
+        </article>
+        <article class="card emphasis">
+          <h3>Obsolescence evitee</h3>
+          <p>Une distribution legere prolonge la vie des PC de plusieurs annees.</p>
+        </article>
+        <article class="card emphasis">
+          <h3>Independance budgetaire</h3>
+          <p>Moins de licences, plus de competences en interne : budget pour la pedagogie.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="roles">
+      <h2>Choisis ton role dans le village</h2>
+      <div class="grid cards-3">
+        <article class="card role">
+          <h3>Enseignant(e)</h3>
+          <p>Anime des ateliers libres et des clubs communs.</p>
+          <a class="btn secondary" href="parcours.html#scenario-enseignant">Je prepare ma classe</a>
+        </article>
+        <article class="card role">
+          <h3>Eleve curieux</h3>
+          <p>Participe aux defis, gagne des badges.</p>
+          <a class="btn secondary" href="parcours.html#scenario-eleve">Je releve les defis</a>
+        </article>
+        <article class="card role">
+          <h3>Admin / Direction</h3>
+          <p>Teste budgets et donnees dans la simulation.</p>
+          <a class="btn secondary" href="simulation.html">Je teste la simulation</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-block">
+      <div>
+        <h2>Pret(e) a equiper le village ?</h2>
+        <p>Passe en mode action avec les solutions NIRD.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn primary" href="solutions.html">Voir les solutions</a>
+        <a class="btn ghost" href="contribuer.html">Contribuer</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="solutions.html">Solutions</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="contribuer.html">Contribuer</a>
+    </div>
+    <p>Code sous licence MIT - Nuit de l Info 2025 - Accessibilite AA visee</p>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

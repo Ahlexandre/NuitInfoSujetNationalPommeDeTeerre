@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Village NIRDistant - Simulation</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="simulation">
+  <a class="skip-link" href="#main">Passer au contenu principal</a>
+  <header class="site-header">
+    <div class="content header-inner">
+      <div class="logo-block">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <path d="M32 4l20 8v16c0 12.7-8.3 24.4-20 28-11.7-3.6-20-15.3-20-28V12l20-8z"/>
+            <path d="M32 12l-10 4v12c0 7.2 4.7 13.9 10 16 5.3-2.1 10-8.8 10-16V16l-10-4z" fill="#d49a3a"/>
+          </svg>
+        </div>
+        <div>
+          <p class="eyebrow">Village numerique resistant</p>
+          <p class="site-title">Village NIRDistant</p>
+          <p class="group-name">Groupe Pomme de terre</p>
+        </div>
+      </div>
+      <nav aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="parcours.html">Parcours</a></li>
+          <li><a href="solutions.html">Solutions NIRD</a></li>
+          <li><a href="simulation.html" aria-current="page">Simulation</a></li>
+          <li><a href="contribuer.html">Contribuer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="content">
+    <section class="page-hero">
+      <p class="tagline">Comparer dependance vs autonomie</p>
+      <h1>Simule l effet NIRD sur ton etablissement</h1>
+      <ol class="simple-steps">
+        <li>Glisse la duree de vie du parc et le cout de licence.</li>
+        <li>Choisis la maitrise des donnees et si la formation interne est active.</li>
+        <li>Valide : score, budget 5 ans et empreinte s affichent.</li>
+      </ol>
+    </section>
+
+    <section class="simulation-grid">
+      <form id="sim-form" class="sim-form">
+        <div class="form-group">
+          <label for="parc-life">Duree de vie du parc (annees)</label>
+          <input type="range" id="parc-life" name="parcLife" min="3" max="7" value="5" aria-valuemin="3" aria-valuemax="7" aria-valuenow="5">
+          <div class="range-values"><span>3</span><span>5</span><span>7</span></div>
+        </div>
+
+        <div class="form-group">
+          <label for="data-control">Maitrise des donnees</label>
+          <select id="data-control" name="dataControl">
+            <option value="faible">Faible</option>
+            <option value="moyenne" selected>Moyenne</option>
+            <option value="forte">Forte</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="license-cost">Cout licences annuelles (€)</label>
+          <input type="number" id="license-cost" name="licenseCost" min="0" step="50" value="1500">
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Formation interne</legend>
+            <div class="radio-row">
+              <input type="radio" id="formation-oui" name="formation" value="oui" checked>
+              <label for="formation-oui">Oui, culture libre</label>
+            </div>
+            <div class="radio-row">
+              <input type="radio" id="formation-non" name="formation" value="non">
+              <label for="formation-non">Non</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label for="autonomy-toggle">Mode autonomie NIRD</label>
+          <input type="checkbox" id="autonomy-toggle" name="autonomyToggle" checked>
+          <span class="hint">Active pour voir l impact positif</span>
+        </div>
+
+        <button type="submit" class="btn primary">Calculer</button>
+      </form>
+
+      <section class="sim-result" id="sim-result" aria-live="polite">
+        <p class="eyebrow">Resultat</p>
+        <h2>Pret a simuler</h2>
+        <p>Ajuste les curseurs puis clique sur "Calculer".</p>
+        <div class="result-metrics">
+          <div class="metric">
+            <p class="metric-label">Score d autonomie</p>
+            <p class="metric-value" id="autonomy-score">-</p>
+          </div>
+          <div class="metric">
+            <p class="metric-label">Budget 5 ans</p>
+            <p class="metric-value" id="budget">-</p>
+          </div>
+          <div class="metric">
+            <p class="metric-label">Empreinte estimee</p>
+            <p class="metric-value" id="footprint">-</p>
+          </div>
+        </div>
+        <p id="sim-reco" class="sim-reco"></p>
+        <button class="btn ghost" id="share-scenario">Copier mon scenario</button>
+        <div id="share-feedback" role="status" aria-live="polite"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="solutions.html">Solutions</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="contribuer.html">Contribuer</a>
+    </div>
+    <p>Code sous licence MIT - Nuit de l Info 2025 - Accessibilite AA visee</p>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

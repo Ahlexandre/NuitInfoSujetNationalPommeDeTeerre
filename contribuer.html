@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Village NIRDistant - Contribuer</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contribuer">
+  <a class="skip-link" href="#main">Passer au contenu principal</a>
+  <header class="site-header">
+    <div class="content header-inner">
+      <div class="logo-block">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <path d="M32 4l20 8v16c0 12.7-8.3 24.4-20 28-11.7-3.6-20-15.3-20-28V12l20-8z"/>
+            <path d="M32 12l-10 4v12c0 7.2 4.7 13.9 10 16 5.3-2.1 10-8.8 10-16V16l-10-4z" fill="#d49a3a"/>
+          </svg>
+        </div>
+        <div>
+          <p class="eyebrow">Village numerique resistant</p>
+          <p class="site-title">Village NIRDistant</p>
+          <p class="group-name">Groupe Pomme de terre</p>
+        </div>
+      </div>
+      <nav aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="parcours.html">Parcours</a></li>
+          <li><a href="solutions.html">Solutions NIRD</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+          <li><a href="contribuer.html" aria-current="page">Contribuer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="content">
+    <section class="page-hero">
+      <p class="tagline">Forger le commun</p>
+      <h1>Contribuer et aller plus loin</h1>
+      <p>Partage tes idees, anime un atelier, documente une installation : chaque geste compte.</p>
+    </section>
+
+    <section class="grid cards-3 contribute-cards">
+      <article class="card">
+        <h3>Ateliers et reemploi</h3>
+        <p>Organise un atelier de reconditionnement avec eleves et profs : du concret, du reemploi.</p>
+      </article>
+      <article class="card">
+        <h3>Documentation</h3>
+        <p>Redige un guide d installation, ajoute des captures, partage des scripts libres.</p>
+      </article>
+      <article class="card">
+        <h3>Traductions et accessibilite</h3>
+        <p>Ameliore la lisibilite, ajoute des sous-titres, verifie les contrastes. Inclusif ou rien.</p>
+      </article>
+    </section>
+
+    <section class="form-section">
+      <h2>Envoyer un message</h2>
+      <p>Stockage local uniquement. Tu peux aussi copier ton message dans un email.</p>
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="contact-name">Nom ou pseudo</label>
+          <input type="text" id="contact-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-role">Role</label>
+          <select id="contact-role" name="role">
+            <option>Enseignant(e)</option>
+            <option>Eleve</option>
+            <option>Administration</option>
+            <option>Parent</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Enregistrer en local</button>
+          <button class="btn ghost" type="button" id="mailto-button">Copier dans un email</button>
+        </div>
+        <div id="contact-feedback" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="charter">
+      <h2>Charte NIRD</h2>
+      <ul>
+        <li>Inclusif : accessibilite, egalite d acces, pedagogies variees.</li>
+        <li>Responsable : sobriete, reemploi, transparence des donnees.</li>
+        <li>Durable : documentation, communs, autonomie dans le temps.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="solutions.html">Solutions</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="contribuer.html">Contribuer</a>
+    </div>
+    <p>Code sous licence MIT - Nuit de l Info 2025 - Accessibilite AA visee</p>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

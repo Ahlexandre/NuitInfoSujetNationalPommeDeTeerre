@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Village NIRDistant - Parcours interactif</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="parcours">
+  <a class="skip-link" href="#main">Passer au contenu principal</a>
+  <header class="site-header">
+    <div class="content header-inner">
+      <div class="logo-block">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <path d="M32 4l20 8v16c0 12.7-8.3 24.4-20 28-11.7-3.6-20-15.3-20-28V12l20-8z"/>
+            <path d="M32 12l-10 4v12c0 7.2 4.7 13.9 10 16 5.3-2.1 10-8.8 10-16V16l-10-4z" fill="#d49a3a"/>
+          </svg>
+        </div>
+        <div>
+          <p class="eyebrow">Village numerique resistant</p>
+          <p class="site-title">Village NIRDistant</p>
+          <p class="group-name">Groupe Pomme de terre</p>
+        </div>
+      </div>
+      <nav aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="parcours.html" aria-current="page">Parcours</a></li>
+          <li><a href="solutions.html">Solutions NIRD</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+          <li><a href="contribuer.html">Contribuer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="content">
+    <section class="page-hero">
+      <p class="tagline">3 clics pour jouer</p>
+      <h1>Choisis ta reponse, vois le feedback, gagne des badges</h1>
+      <ol class="simple-steps">
+        <li>Appuie sur <strong>Lancer les defis</strong>.</li>
+        <li>Pour chaque scenario, clique sur la reponse qui te semble la plus "NIRD".</li>
+        <li>Regarde le feedback en dessous et ton score/badges en haut.</li>
+      </ol>
+      <div class="hero-actions">
+        <button class="btn primary" id="start-quiz">Lancer les defis</button>
+        <a class="btn ghost" href="solutions.html">Voir les solutions</a>
+      </div>
+      <div class="scoreboard" aria-live="polite">
+        <p>Score actuel : <span id="score-value">0</span> pts</p>
+        <p>Badges obtenus : <span id="badge-list">-</span></p>
+      </div>
+    </section>
+
+    <section class="quiz-section" aria-live="polite">
+      <div id="quiz-container" class="quiz-card" data-index="0">
+        <p class="eyebrow">Scenario</p>
+        <h2 id="quiz-question">Clique sur "Lancer les defis" pour commencer.</h2>
+        <div id="quiz-choices" class="choices"></div>
+        <div class="quiz-feedback" id="quiz-feedback" role="status"></div>
+        <div class="quiz-progress">
+          <div class="progress-bar" aria-hidden="true"><span id="progress-fill"></span></div>
+          <p><span id="quiz-step">0</span>/<span id="quiz-total">0</span> scenarios</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-block">
+      <div>
+        <h2>Envie d appliquer tout de suite ?</h2>
+        <p>Va voir les solutions pretes a l emploi ou teste la simulation.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn primary" href="solutions.html">Voir les solutions</a>
+        <a class="btn ghost" href="simulation.html">Tester la simulation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="solutions.html">Solutions</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="contribuer.html">Contribuer</a>
+    </div>
+    <p>Code sous licence MIT - Nuit de l Info 2025 - Accessibilite AA visee</p>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

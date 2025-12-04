@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Village NIRDistant - Solutions NIRD</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="solutions">
+  <a class="skip-link" href="#main">Passer au contenu principal</a>
+  <header class="site-header">
+    <div class="content header-inner">
+      <div class="logo-block">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <path d="M32 4l20 8v16c0 12.7-8.3 24.4-20 28-11.7-3.6-20-15.3-20-28V12l20-8z"/>
+            <path d="M32 12l-10 4v12c0 7.2 4.7 13.9 10 16 5.3-2.1 10-8.8 10-16V16l-10-4z" fill="#d49a3a"/>
+          </svg>
+        </div>
+        <div>
+          <p class="eyebrow">Village numerique resistant</p>
+          <p class="site-title">Village NIRDistant</p>
+          <p class="group-name">Groupe Pomme de terre</p>
+        </div>
+      </div>
+      <nav aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="parcours.html">Parcours</a></li>
+          <li><a href="solutions.html" aria-current="page">Solutions NIRD</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+          <li><a href="contribuer.html">Contribuer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="content">
+    <section class="page-hero">
+      <p class="tagline">Arsenal du village</p>
+      <h1>Les solutions NIRD pour resister</h1>
+      <p>Choisis un filtre, lis les cartes, copie la liste si tu veux la partager.</p>
+      <div class="filter-bar">
+        <label for="filter-select">Filtrer par categorie</label>
+        <select id="filter-select">
+          <option value="all">Toutes</option>
+          <option value="systeme">Systeme</option>
+          <option value="materiel">Materiel</option>
+          <option value="pedagogie">Pedagogie</option>
+          <option value="communaute">Communaute</option>
+          <option value="sobriete">Sobriete</option>
+        </select>
+        <button class="btn secondary" id="export-json">Copier en JSON</button>
+        <div id="export-feedback" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="solutions-grid" id="solutions-grid" aria-live="polite">
+      <!-- Cartes injectees par JS -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="solutions.html">Solutions</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="contribuer.html">Contribuer</a>
+    </div>
+    <p>Code sous licence MIT - Nuit de l Info 2025 - Accessibilite AA visee</p>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
